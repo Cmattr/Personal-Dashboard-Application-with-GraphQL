@@ -1,3 +1,33 @@
+GraphQL Page.
+Welcome to The GraphQL Website. This website is designed to display user information, display, create, edit and delete post and view todo list.
+1. Dashboard: Displays the current user information. Also included is a Navigaiton bar that will allow the user to navigate to post, and todos.
+2. Post: This page displays post. Additionally you can add post via the add post form as well as delete and update post by selecting the buttons with the same name.
+3. comments: each post that is displayed/ created also serves as a link to the comments for that post. You can impliment this action by clicking the text of any post. 
+4. Todos: displays the chosen todo by id.
+
+
+
+
+- Installation and Setup
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/cmattr/Personal-Dashboard-Application-with-GraphQL.git
+    ```
+2. Navigate to the project directory:
+```sh
+  cd Personal-Dashboard-Application-with-GraphQL
+```
+3. In the terminal Use this code to start the application.
+```sh
+  npm start
+```
+
+   
+- Usage:
+Explore the different pages using the navigation bar or links provided.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
