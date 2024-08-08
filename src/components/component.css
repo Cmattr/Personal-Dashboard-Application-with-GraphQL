@@ -1,0 +1,40 @@
+.NavBar{
+    background-color: rgb(0, 115, 255);
+    padding: 10px;
+    margin: 10px;
+}
+.NavLink{
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.card{
+    background-color: rgb(0, 115, 255);
+    color: white;
+    padding: 10px;
+    border: 10px, ridge, black;
+    margin: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+.form{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: anchor-center ;
+    justify-content: center;
+    
+}
+
+.div{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: anchor-center ;
+    justify-content: center;
+}
