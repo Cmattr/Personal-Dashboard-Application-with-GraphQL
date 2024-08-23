@@ -13,7 +13,6 @@ function App() {
       <Route path='/' element={<Dashboard />} />
       <Route path='/post' element={<UserPost />} />
       <Route path='/post/:id' element={<CommentPage />} />
-      <Route path='/todo' element={<ToDos todoId={'13'} />} /> 
       <Route path='*' element={<div>Page not found</div>} />
     </Routes>
   );
