@@ -2,7 +2,6 @@ import { useMutation } from "@apollo/client";
 import React, { FormEvent, useRef, useState } from "react";
 import { ADD_USER_POST, DELETE_USER_POST } from "../Queries/Mutations";
 import { Button, Form, Card, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import { GET_USER_POST } from "../Queries/Queries";
 
 const CreatePostForm: React.FC = () => {

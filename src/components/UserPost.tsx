@@ -3,11 +3,9 @@ import { Button, Card, Container, Row, Col, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useQuery, useMutation } from "@apollo/client";
 import { GET_USER_POST } from "../Queries/Queries";
-import { ADD_USER_POST, UPDATE_USER_POST, DELETE_USER_POST } from "../Queries/Mutations";
+import { UPDATE_USER_POST, DELETE_USER_POST } from "../Queries/Mutations";
 import CreatePostForm from "./AddUserPost";
 import NavBar from "./NavBar";
-
-
 
 interface Post {
     id: string;
@@ -27,7 +25,6 @@ const UserPost: React.FC = () => {
     if (error) return <p>Error: {error.message}</p>;
 
     const posts: Post[] = data?.user?.posts?.data || [];
-    
 
     const handleUpdatePost = async () => {
         if (editPost) {
@@ -59,15 +56,19 @@ const UserPost: React.FC = () => {
     };
 
     return (
-        
         <Container>
-        <NavBar />
-        <CreatePostForm />
+            <NavBar />
+            <CreatePostForm />
+            {errorMsg && (
+                <div className="alert alert-danger" role="alert">
+                    {errorMsg}
+                </div>
+            )}
             {editPost && (
                 <Row>
                     <Col>
-                        <Form  className="form">
-                        <h2>Edit Post</h2>
+                        <Form className="form">
+                            <h2>Edit Post</h2>
                             <Form.Group controlId="formEditTitle">
                                 <Form.Label>Title</Form.Label>
                                 <Form.Control
@@ -101,23 +102,22 @@ const UserPost: React.FC = () => {
                                     <Card.Body>
                                         <Card.Title>Title: {post.title}</Card.Title>
                                         <Card.Text>Body: {post.body}</Card.Text>
-                              
                                     </Card.Body>
                                 </Card>
                             </Link>
                             <Button
-                                            variant="warning"
-                                            onClick={() => setEditPost(post)}
-                                            aria-label={`Edit post with title ${post.title}`}
-                                        >
-                                            Edit
-                                        </Button>
-                                        <Button
-                                            variant="danger"
-                                            onClick={() => handleDeletePost(post.id)}
-                                        >
-                                            Delete
-                                        </Button>
+                                variant="warning"
+                                onClick={() => setEditPost(post)}
+                                aria-label={`Edit post with title ${post.title}`}
+                            >
+                                Edit
+                            </Button>
+                            <Button
+                                variant="danger"
+                                onClick={() => handleDeletePost(post.id)}
+                            >
+                                Delete
+                            </Button>
                         </Col>
                     ))
                 ) : (
@@ -129,3 +129,4 @@ const UserPost: React.FC = () => {
 };
 
 export default UserPost;
+
